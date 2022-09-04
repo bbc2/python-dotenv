@@ -416,3 +416,8 @@ def test_dotenv_values_file_stream(dotenv_file):
         result = dotenv.dotenv_values(stream=f)
 
     assert result == {"a": "b"}
+
+
+def test_set_key_nonexistent_file():
+    with pytest.raises(PermissionError):
+        dotenv.set_key("/root/unauthorized", "a", "x")
