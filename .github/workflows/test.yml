@@ -2,8 +2,6 @@ name: Run Tests
 
 on:
   push:
-    branches:
-      - main
   pull_request:
 
 # Least-privilege default token for every job in this workflow.
